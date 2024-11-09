@@ -12,13 +12,13 @@ let totalPagecount=0;
 
 
 function fetchData(){
-    // fetch('https://dummyjson.com/recipes?limit=1000')
-    // .then(res => res.json())
-    // .then(showData);
-    setDetails(sampleRecipesData);
+    fetch('https://dummyjson.com/recipes?limit=1000')
+    .then(res => res.json())
+    .then(data=>setDetails(data));
+    // setDetails(sampleRecipesData);
 }
 function setDetails(data){
-    recipesArray=data;
+    recipesArray=data.recipes;
     totalDataSize=recipesArray.length;
     totalPagecount=Math.ceil(totalDataSize/pageSize);
     // updateActive();
