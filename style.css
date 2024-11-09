@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 100dvh;
+}
+
+.container, .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: #393a3e;
+    
+}
+.btn{
+    /* padding: 2px; */
+    font-size: large;
+    width: 40px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 3px solid #eaeaea;
+    background-color: #ffffff;
+}
+.btn:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+.truncated{
+    border: none;
+    background-color: transparent;
+    position: relative;
+    cursor: default;
+    pointer-events: none;
+}
+.truncated::after{
+    box-sizing: border-box;
+    content: "...";
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    font-size: large;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    border: 3px solid #eaeaea;
+    background-color: #ffffff;
+}
+.active{
+    background-color: #3f96fd;
+    border: 3px #3f96fd solid;
+    color: #ffffff;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card {
+    width: 280px;
+    border: 2px solid #eaeaea;
+    border-radius: 8px;
+    padding: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 1.2em;
+    text-align: center;
+    font-weight: bold;
+}
+
+.properties-container, .ingredients-container, .instructions-container {
+    margin-top: 10px;
+}
+
+.property-list, .ingredient-list, .instruction-list {
+    padding-left: 20px;
+}
+
+.property, .ingredient, .instruction {
+    font-size: 0.9em;
+}
+
+h3 {
+    font-size: 1em;
+    margin-bottom: 5px;
+}
+.card {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
